@@ -1,0 +1,22 @@
+"""
+Input: s = "racecar", t = "carrace"
+
+Output: true
+
+S.C. O(n+m)
+T.C. O(n+m)
+"""
+
+class Solution:
+    def isAnagram(self, s: str, t: str) -> bool:
+        count1 = defaultdict(int)
+        count2 = defaultdict(int)
+
+        for i in range(len(s)):
+            count1[s[i]] +=1
+            
+        for i in range(len(t)):
+            count2[t[i]] +=1
+           
+        return count1 == count2
+
